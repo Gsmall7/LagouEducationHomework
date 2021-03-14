@@ -92,13 +92,15 @@ public class DoubleColorBallLottery {
     }
 
     public static void main(String[] args) {
+        System.out.println("正在初始化号码池。。。。。。");
         // 初始化号码池
         List<Integer> redNumberPool = initNumberPool(DEFAULT_RED_NUMBER_POOL_DEEP);
         List<Integer> blueNumberPool = initNumberPool(DEFAULT_BLUE_NUMBER_POOL_DEEP);
+        System.out.println("即将开始随机抽取号码球。。。。。。");
         // 获取奖牌池
         List<Integer> redLottery = getRedLottery(redNumberPool);
         List<Integer> blueLottery = getBlueLottery(blueNumberPool);
-        System.out.println("输出红色球号码:" + redLottery);
-        System.out.println("输出蓝色球号码" + blueLottery);
+        System.out.println("本次抽取的红色球号码:" + redLottery);
+        System.out.println("本次抽取的蓝色球号码" + blueLottery);
     }
 }
